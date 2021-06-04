@@ -142,7 +142,7 @@ MonoBehaviour:
   m_CornerAngleThreshold: 30
   m_ColliderDetail: 16
   m_ColliderOffset: 0
-  m_UpdateCollider: 1
+  m_UpdateCollider: 0
   m_OptimizeCollider: 1
   m_OptimizeGeometry: 1
   m_EnableTangents: 0
@@ -159,8 +159,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a0711f538392d246a7e0b05ccc8a0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: Left RTriangle
-  template: 0
+  mId: Left RTriangle
+  mTemplate: 0
 --- !u!60 &6074689923322109797
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -188,7 +188,7 @@ PolygonCollider2D:
     m_Paths:
     - - {x: -2, y: -2}
       - {x: 2, y: 2}
-      - {x: 2, y: -2}
+      - {x: 1.5800211, y: -1.8338852}
       - {x: -1.8056297, y: -2}
       - {x: -1.9490371, y: -2}
       - {x: -2, y: -2}

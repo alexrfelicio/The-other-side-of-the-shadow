@@ -5,42 +5,49 @@ using UnityEngine.EventSystems;
 
 public class Identifier : MonoBehaviour {
 
-    [SerializeField] private string id;
-    [SerializeField] private bool template;
+    [SerializeField] private string mId;
+    [SerializeField] private bool mTemplate;
 
-    private bool correct;
-    private float threshold = 0.5f;
+    private bool mCorrect;
+    private float mThreshold = 3f;
 
     private void OnTriggerStay2D(Collider2D collision) {
         Identifier collided = collision.gameObject.GetComponent<Identifier>();
         Identifier current = gameObject.GetComponent<Identifier>();
         
-        if (collided.GetId().Equals(current.GetId())) {
+        if (!collided.IsTemplate() && collided.GetId().Equals(current.GetId())) {
             Transform collidedTransform = collision.gameObject.transform;
             Transform currentTransform = gameObject.transform;
-            correct = IsPositionAccept(collidedTransform, currentTransform)
+
+            mCorrect = IsPositionAccept(collidedTransform, currentTransform)
                 && IsRotateAccept(collidedTransform, currentTransform);
+
+                Debug.Log("Collided: " + collided.name);
+                Debug.Log("Current: " + current.name);
+                Debug.Log("IsPositionAccept: " + IsPositionAccept(collidedTransform, currentTransform));
+                Debug.Log("IsRotateAccept: " + IsPositionAccept(collidedTransform, currentTransform));
+
         }
     }
 
     private bool IsPositionAccept(Transform collidedTransform, Transform currentTransform) {
-        return Mathf.Abs(collidedTransform.position.x - currentTransform.position.x) <= threshold 
-            && Mathf.Abs(collidedTransform.position.y - currentTransform.position.y) <= threshold;
+        return Mathf.Abs(collidedTransform.position.x - currentTransform.position.x) <= mThreshold
+            && Mathf.Abs(collidedTransform.position.y - currentTransform.position.y) <= mThreshold;
     }
 
     private bool IsRotateAccept(Transform collidedTransform, Transform currentTransform) {
-        return Mathf.Abs(collidedTransform.rotation.z - currentTransform.rotation.z) <= threshold;
+        return Mathf.Abs(collidedTransform.rotation.z - currentTransform.rotation.z) <= mThreshold;
     }
 
     public string GetId() {
-        return id;
+        return mId;
     }
 
     public bool IsCorrect() {
-        return correct;
+        return mCorrect;
     }
 
     public bool IsTemplate() {
-        return template;
+        return mTemplate;
     }
 }

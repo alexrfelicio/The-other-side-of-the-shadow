@@ -133,7 +133,7 @@ MonoBehaviour:
   m_CornerAngleThreshold: 30
   m_ColliderDetail: 16
   m_ColliderOffset: 0
-  m_UpdateCollider: 1
+  m_UpdateCollider: 0
   m_OptimizeCollider: 1
   m_OptimizeGeometry: 1
   m_EnableTangents: 0
@@ -150,8 +150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a0711f538392d246a7e0b05ccc8a0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: Triangle
-  template: 0
+  mId: Triangle
+  mTemplate: 0
 --- !u!60 &8254258643707968623
 PolygonCollider2D:
   m_ObjectHideFlags: 0
