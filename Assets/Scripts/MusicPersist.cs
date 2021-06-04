@@ -31,4 +31,10 @@ public class MusicPersist : MonoBehaviour {
     public bool IsPlaying() {
         return Instance.GetComponent<AudioSource>().isPlaying;
     }
+
+    public void ChangeAudioClip(AudioClip clip) {
+        StopAudio();
+        GetComponent<AudioSource>().clip = clip;
+        PlayAudio();
+    }
 }

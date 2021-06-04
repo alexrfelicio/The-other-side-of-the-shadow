@@ -6,6 +6,7 @@ using UnityEngine.U2D;
 public class TangramController : MonoBehaviour {
 
     [SerializeField] private GameObject[] levels;
+    [SerializeField] private AudioClip clickSFX;
 
     private bool mTemplate = false;
     private float mInitialSpeed = 0f;
@@ -36,6 +37,9 @@ public class TangramController : MonoBehaviour {
                 hit.collider.GetComponent<SpriteShapeRenderer>().color = new Color(tmp.r, tmp.g, tmp.b, 1f);
                 if (identifier != null)
                     mTemplate = hit.collider.GetComponent<Identifier>().IsTemplate();
+                if (!mTemplate) {
+                    AudioSource.PlayClipAtPoint(clickSFX, hit.transform.position, 0.6f);
+                }
             }
         }
 

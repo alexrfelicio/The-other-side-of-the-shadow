@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class ScenesManager : MonoBehaviour {
 
+    [SerializeField] private Animator animator;
+
     private const int START_SCENE_IDX = 0;
     private const int GAME_SCENE_IDX = 1;
     private const int TANGRAM_SCENE_IDX = 2;
@@ -23,8 +25,16 @@ public class ScenesManager : MonoBehaviour {
     }
 
     public void LoadScene(int scene) {
+        StartCoroutine(LoadTransitionScene(scene));
+    }
+
+    IEnumerator LoadTransitionScene(int scene) {
+        animator.SetTrigger("Start");
+
+        yield return new WaitForSeconds(1);
+
         string sceneToLoad = null;
-        switch(scene) {
+        switch (scene) {
             case START_SCENE_IDX:
                 sceneToLoad = START_SCENE;
                 break;
@@ -47,11 +57,6 @@ public class ScenesManager : MonoBehaviour {
         if (sceneToLoad != null) {
             SceneManager.LoadScene(sceneToLoad);
         }
-    }
-
-    public void test (Image img, int test)
-    {
-
     }
 
     public void QuitGame() {

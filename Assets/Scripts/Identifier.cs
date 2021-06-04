@@ -21,12 +21,6 @@ public class Identifier : MonoBehaviour {
 
             mCorrect = IsPositionAccept(collidedTransform, currentTransform)
                 && IsRotateAccept(collidedTransform, currentTransform);
-
-                Debug.Log("Collided: " + collided.name);
-                Debug.Log("Current: " + current.name);
-                Debug.Log("IsPositionAccept: " + IsPositionAccept(collidedTransform, currentTransform));
-                Debug.Log("IsRotateAccept: " + IsPositionAccept(collidedTransform, currentTransform));
-
         }
     }
 
