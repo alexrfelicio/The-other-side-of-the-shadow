@@ -21,7 +21,7 @@ public class EndingController : MonoBehaviour {
     }
 
     IEnumerator ShowEnd() {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(3f);
         GamePersist gamePersist = FindObjectOfType<GamePersist>();
         if (gamePersist.GetBad() > gamePersist.GetGood()) {
             FindObjectOfType<MusicPersist>().ChangeAudioClip(badEndSong);
