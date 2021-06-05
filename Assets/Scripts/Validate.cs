@@ -8,6 +8,7 @@ public class Validate : MonoBehaviour {
     [SerializeField] private GameObject[] templates;
     [SerializeField] private GameObject[] pieces;
     [SerializeField] private Button checkButton;
+    [SerializeField] private Button exitButton;
     [SerializeField] private Image errorImg;
     [SerializeField] private GameObject answerModal;
     [SerializeField] private AudioClip winSFX;
@@ -39,6 +40,7 @@ public class Validate : MonoBehaviour {
 
         if (win) {
             checkButton.gameObject.SetActive(false);
+            exitButton.gameObject.SetActive(false);
             answerModal.SetActive(true);
             answerModal.gameObject.transform.GetChild(level).gameObject.SetActive(true);
             AudioSource.PlayClipAtPoint(winSFX, transform.position, volume);

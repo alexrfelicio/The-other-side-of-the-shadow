@@ -7,19 +7,19 @@ public class GamePersist : MonoBehaviour {
 
     public static GamePersist Instance { get; private set; }
     private int currentLevel;
-    private Dictionary<int, Sprite> silhouettes = new Dictionary<int, Sprite>();
-    private Vector3 playerPosition;
     private int good;
     private int bad;
+    private ColorBlindMode colorBlindMode;
+    private Dictionary<int, Sprite> silhouettes = new Dictionary<int, Sprite>();
+    private Vector3 playerPosition;
 
     private void Awake() {
         if (Instance == null) {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            ResumeGame();
+            Instance.colorBlindMode = ColorBlindMode.Normal;
         } else {
             Destroy(gameObject);
-            Instance.ResumeGame();
         }
     }
 
@@ -32,9 +32,7 @@ public class GamePersist : MonoBehaviour {
     }
 
     public void AddSilhouette(Sprite silhouette) {
-        Debug.Log(silhouette);
         Instance.silhouettes.Add(currentLevel, silhouette);
-        Debug.Log(silhouettes.Count);
     }
 
     public Dictionary<int, Sprite> GetSilhouette() {
@@ -68,11 +66,12 @@ public class GamePersist : MonoBehaviour {
         return Instance.playerPosition;
     }
 
-    public void PauseGame() {
-        Time.timeScale = 0f;
+    public void SetColorBlindMode(ColorBlindMode mode) {
+        Instance.colorBlindMode = mode;
     }
 
-    public void ResumeGame() {
-        Time.timeScale = 1f;
+    public ColorBlindMode GetColorBlindMode() {
+        return Instance.colorBlindMode;
     }
+
 }

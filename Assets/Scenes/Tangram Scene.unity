@@ -43,7 +43,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 11
+  serializedVersion: 12
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -98,7 +98,8 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_LightingSettings: {fileID: 4890085278179872738, guid: ae7647ca5985d7d458a5a51994889646,
+    type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -118,6 +119,8 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
@@ -156,8 +159,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1420.7197, y: -435.93875}
-  m_SizeDelta: {x: 939.85693, y: 871.8775}
+  m_AnchoredPosition: {x: 1420.7197, y: -440.4567}
+  m_SizeDelta: {x: 939.85693, y: 760.9134}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &83287344
 MonoBehaviour:
@@ -203,6 +206,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 681051334}
+        m_TargetAssemblyTypeName: 
         m_MethodName: Choose
         m_Mode: 3
         m_Arguments:
@@ -214,6 +218,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 638041370}
+        m_TargetAssemblyTypeName: 
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
@@ -239,13 +244,14 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 697ef6dc911201b4cb376a1ae01d5b71, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -352,7 +358,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ShapeTexture
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2800000, guid: e7b64ad8cf0aa384eb34092ddf8a1f2f, type: 3}
     - target: {fileID: 4998945726348538828, guid: f6f58889aee4f7246bd993647462bddb,
         type: 3}
       propertyPath: m_Color.r
@@ -382,6 +388,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.a
       value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998945726348538828, guid: f6f58889aee4f7246bd993647462bddb,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998945726348538828, guid: f6f58889aee4f7246bd993647462bddb,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Center.y
+      value: -0.00000023841858
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998945726348538828, guid: f6f58889aee4f7246bd993647462bddb,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Extent.x
+      value: 2.0000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998945726348538828, guid: f6f58889aee4f7246bd993647462bddb,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Extent.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4998945726348538829, guid: f6f58889aee4f7246bd993647462bddb,
         type: 3}
@@ -453,6 +479,32 @@ PrefabInstance:
       propertyPath: m_Name
       value: Square
       objectReference: {fileID: 0}
+    - target: {fileID: 4998945726348538831, guid: f6f58889aee4f7246bd993647462bddb,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[0].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998945726348538831, guid: f6f58889aee4f7246bd993647462bddb,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[1].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998945726348538831, guid: f6f58889aee4f7246bd993647462bddb,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[2].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998945726348538831, guid: f6f58889aee4f7246bd993647462bddb,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[3].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998945726348538831, guid: f6f58889aee4f7246bd993647462bddb,
+        type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6f58889aee4f7246bd993647462bddb, type: 3}
 --- !u!4 &88315876 stripped
@@ -543,6 +595,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 793535007}
+        m_TargetAssemblyTypeName: 
         m_MethodName: Verify
         m_Mode: 1
         m_Arguments:
@@ -554,6 +607,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 638041370}
+        m_TargetAssemblyTypeName: 
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
@@ -579,6 +633,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -636,8 +691,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 475.39563, y: -435.93875}
-  m_SizeDelta: {x: 950.79126, y: 871.8775}
+  m_AnchoredPosition: {x: 475.39563, y: -440.4567}
+  m_SizeDelta: {x: 950.79126, y: 760.9134}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &118666651
 MonoBehaviour:
@@ -654,13 +709,14 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: c68018dd6c272a44ea50ee5fa378dc94, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -696,9 +752,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.2509804}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0.49803922}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.2509804}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -720,6 +776,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 681051334}
+        m_TargetAssemblyTypeName: 
         m_MethodName: Choose
         m_Mode: 3
         m_Arguments:
@@ -731,6 +788,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 638041370}
+        m_TargetAssemblyTypeName: 
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
@@ -823,6 +881,12 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
       propertyPath: m_DynamicOccludee
@@ -893,6 +957,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 411168026}
     m_Modifications:
+    - target: {fileID: 3105107258520044, guid: 8393af3d0be973d438ce6942b5ad55e3, type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     - target: {fileID: 3105107258520045, guid: 8393af3d0be973d438ce6942b5ad55e3, type: 3}
       propertyPath: m_Name
       value: Triangle 2
@@ -1004,6 +1073,32 @@ PrefabInstance:
       propertyPath: m_UpdateCollider
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2992790694869975905, guid: 1a6ac744dce49cd48a3f4f3ae48a11b4,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[0].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2992790694869975905, guid: 1a6ac744dce49cd48a3f4f3ae48a11b4,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[1].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2992790694869975905, guid: 1a6ac744dce49cd48a3f4f3ae48a11b4,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[2].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2992790694869975905, guid: 1a6ac744dce49cd48a3f4f3ae48a11b4,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[3].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2992790694869975905, guid: 1a6ac744dce49cd48a3f4f3ae48a11b4,
+        type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     - target: {fileID: 2992790694869975918, guid: 1a6ac744dce49cd48a3f4f3ae48a11b4,
         type: 3}
       propertyPath: m_DynamicOccludee
@@ -1013,7 +1108,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ShapeTexture
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2800000, guid: e7b64ad8cf0aa384eb34092ddf8a1f2f, type: 3}
     - target: {fileID: 2992790694869975918, guid: 1a6ac744dce49cd48a3f4f3ae48a11b4,
         type: 3}
       propertyPath: m_LocalAABB.m_Center.x
@@ -1058,6 +1153,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.a
       value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 2992790694869975918, guid: 1a6ac744dce49cd48a3f4f3ae48a11b4,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Extent.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2992790694869975919, guid: 1a6ac744dce49cd48a3f4f3ae48a11b4,
         type: 3}
@@ -1260,7 +1360,7 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 0
+    m_Top: 60
     m_Bottom: 0
   m_ChildAlignment: 0
   m_Spacing: 0
@@ -1270,6 +1370,7 @@ MonoBehaviour:
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1001 &349230461
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1277,6 +1378,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1272367404}
     m_Modifications:
+    - target: {fileID: 3105107258520044, guid: 8393af3d0be973d438ce6942b5ad55e3, type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     - target: {fileID: 3105107258520045, guid: 8393af3d0be973d438ce6942b5ad55e3, type: 3}
       propertyPath: m_Name
       value: Triangle 1
@@ -1472,8 +1578,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1420.7197, y: -435.93875}
-  m_SizeDelta: {x: 939.85693, y: 871.8775}
+  m_AnchoredPosition: {x: 1420.7197, y: -440.45676}
+  m_SizeDelta: {x: 939.85693, y: 760.9135}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &355584014
 MonoBehaviour:
@@ -1490,13 +1596,14 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 2b3097ff897c6eb42abd78310469bee1, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -1532,9 +1639,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.2509804}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.49803922}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.2509804}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1556,6 +1663,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 681051334}
+        m_TargetAssemblyTypeName: 
         m_MethodName: Choose
         m_Mode: 3
         m_Arguments:
@@ -1567,6 +1675,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 638041370}
+        m_TargetAssemblyTypeName: 
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
@@ -1584,6 +1693,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1211885177537284827, guid: a838ea7756fb32a4a91d3b4c49237f69,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4207747273456338425, guid: a838ea7756fb32a4a91d3b4c49237f69,
+        type: 3}
+      propertyPath: m_Alpha
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6893621380359400194, guid: a838ea7756fb32a4a91d3b4c49237f69,
         type: 3}
       propertyPath: m_Camera
@@ -1627,7 +1746,7 @@ PrefabInstance:
     - target: {fileID: 8718762227663693100, guid: a838ea7756fb32a4a91d3b4c49237f69,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8718762227663693100, guid: a838ea7756fb32a4a91d3b4c49237f69,
         type: 3}
@@ -1785,6 +1904,12 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4998945726348538831, guid: f6f58889aee4f7246bd993647462bddb,
+        type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6f58889aee4f7246bd993647462bddb, type: 3}
 --- !u!4 &399584835 stripped
@@ -1845,6 +1970,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.83137256}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1910,6 +2036,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2094157848}
     m_Modifications:
+    - target: {fileID: 3105107258520044, guid: 8393af3d0be973d438ce6942b5ad55e3, type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     - target: {fileID: 3105107258520045, guid: 8393af3d0be973d438ce6942b5ad55e3, type: 3}
       propertyPath: m_Name
       value: Triangle 3
@@ -2087,6 +2218,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 411168026}
     m_Modifications:
+    - target: {fileID: 3105107258520044, guid: 8393af3d0be973d438ce6942b5ad55e3, type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     - target: {fileID: 3105107258520045, guid: 8393af3d0be973d438ce6942b5ad55e3, type: 3}
       propertyPath: m_Name
       value: Triangle 1
@@ -2211,7 +2347,7 @@ Transform:
   - {fileID: 1070852389}
   - {fileID: 1187558504}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -2224,6 +2360,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2239,6 +2376,20 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75ef3d3a90250f940860f4733f93ce6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mode: 0
+  showDifference: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -2378,6 +2529,32 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[0].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[1].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[2].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[3].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
       propertyPath: m_DynamicOccludee
@@ -2387,7 +2564,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ShapeTexture
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2800000, guid: e7b64ad8cf0aa384eb34092ddf8a1f2f, type: 3}
     - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
       propertyPath: m_Color.r
@@ -2407,6 +2584,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Center.y
+      value: -0.00000023841858
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Extent.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Extent.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6074689923322109797, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
@@ -2494,7 +2691,7 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 0
+    m_Top: 60
     m_Bottom: 0
   m_ChildAlignment: 0
   m_Spacing: 0
@@ -2504,6 +2701,7 @@ MonoBehaviour:
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1001 &631563885
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2511,6 +2709,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1272367404}
     m_Modifications:
+    - target: {fileID: 3105107258520044, guid: 8393af3d0be973d438ce6942b5ad55e3, type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     - target: {fileID: 3105107258520045, guid: 8393af3d0be973d438ce6942b5ad55e3, type: 3}
       propertyPath: m_Name
       value: Triangle 2
@@ -2678,6 +2881,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1536157777}
     m_Modifications:
+    - target: {fileID: 3105107258520044, guid: 8393af3d0be973d438ce6942b5ad55e3, type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     - target: {fileID: 3105107258520045, guid: 8393af3d0be973d438ce6942b5ad55e3, type: 3}
       propertyPath: m_Name
       value: Triangle 3
@@ -2822,7 +3030,7 @@ PrefabInstance:
     - target: {fileID: 756040404320202342, guid: 8ff9e62d26025c145b87136be37dd8c5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 756040404320202342, guid: 8ff9e62d26025c145b87136be37dd8c5,
         type: 3}
@@ -2895,7 +3103,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &700686547
 PrefabInstance:
@@ -3084,6 +3292,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Square
       objectReference: {fileID: 0}
+    - target: {fileID: 4998945726348538831, guid: f6f58889aee4f7246bd993647462bddb,
+        type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6f58889aee4f7246bd993647462bddb, type: 3}
 --- !u!4 &700686548 stripped
@@ -3099,6 +3313,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1536157777}
     m_Modifications:
+    - target: {fileID: 3105107258520044, guid: 8393af3d0be973d438ce6942b5ad55e3, type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     - target: {fileID: 3105107258520045, guid: 8393af3d0be973d438ce6942b5ad55e3, type: 3}
       propertyPath: m_Name
       value: Triangle
@@ -3200,6 +3419,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2094157848}
     m_Modifications:
+    - target: {fileID: 3105107258520044, guid: 8393af3d0be973d438ce6942b5ad55e3, type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     - target: {fileID: 3105107258520045, guid: 8393af3d0be973d438ce6942b5ad55e3, type: 3}
       propertyPath: m_Name
       value: Triangle 2
@@ -3399,7 +3623,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &793535007
 MonoBehaviour:
@@ -3422,6 +3646,7 @@ MonoBehaviour:
   - {fileID: 1272367403}
   - {fileID: 2094157847}
   checkButton: {fileID: 116991397}
+  exitButton: {fileID: 959588109}
   errorImg: {fileID: 839355735}
   answerModal: {fileID: 1411941614}
   winSFX: {fileID: 8300000, guid: 760b2216a5209cd4aa8c3e63793b7c10, type: 3}
@@ -3461,7 +3686,7 @@ RectTransform:
   - {fileID: 839355734}
   - {fileID: 1411941615}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3580,6 +3805,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3637,8 +3863,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 475.39563, y: -435.93875}
-  m_SizeDelta: {x: 950.79126, y: 871.8775}
+  m_AnchoredPosition: {x: 475.39563, y: -440.4567}
+  m_SizeDelta: {x: 950.79126, y: 760.9134}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &853964291
 MonoBehaviour:
@@ -3684,6 +3910,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 681051334}
+        m_TargetAssemblyTypeName: 
         m_MethodName: Choose
         m_Mode: 3
         m_Arguments:
@@ -3695,6 +3922,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 638041370}
+        m_TargetAssemblyTypeName: 
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
@@ -3720,13 +3948,14 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 9c5f82a4efe0d0c4da85839cf87be3b4, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -3854,6 +4083,12 @@ PrefabInstance:
       propertyPath: m_WorldSpaceUV
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
       propertyPath: m_DynamicOccludee
@@ -4024,6 +4259,32 @@ PrefabInstance:
       propertyPath: m_WorldSpaceUV
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[0].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[1].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[2].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[3].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
       propertyPath: m_DynamicOccludee
@@ -4033,7 +4294,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ShapeTexture
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2800000, guid: e7b64ad8cf0aa384eb34092ddf8a1f2f, type: 3}
     - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
       propertyPath: m_Color.r
@@ -4063,6 +4324,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Extent.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Extent.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6074689923322109797, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
@@ -4179,6 +4455,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 392011932}
+        m_TargetAssemblyTypeName: 
         m_MethodName: LoadScene
         m_Mode: 3
         m_Arguments:
@@ -4190,6 +4467,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 638041370}
+        m_TargetAssemblyTypeName: 
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
@@ -4215,6 +4493,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4320,6 +4599,32 @@ PrefabInstance:
       propertyPath: m_Name
       value: Left RTriangle 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[0].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[1].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[2].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[3].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
       propertyPath: m_DynamicOccludee
@@ -4329,7 +4634,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ShapeTexture
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2800000, guid: e7b64ad8cf0aa384eb34092ddf8a1f2f, type: 3}
     - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
       propertyPath: m_Color.r
@@ -4359,6 +4664,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.a
       value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Center.y
+      value: -0.00000023841858
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Extent.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Extent.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6074689923322109797, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
@@ -4547,6 +4872,32 @@ PrefabInstance:
       propertyPath: m_Name
       value: Left RTriangle 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[0].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[1].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[2].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[3].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
       propertyPath: m_DynamicOccludee
@@ -4556,7 +4907,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ShapeTexture
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2800000, guid: e7b64ad8cf0aa384eb34092ddf8a1f2f, type: 3}
     - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
       propertyPath: m_Color.r
@@ -4586,6 +4937,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.a
       value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Center.y
+      value: -0.00000023841858
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Extent.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Extent.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6074689923322109797, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
@@ -4687,6 +5058,12 @@ PrefabInstance:
       propertyPath: m_Spline.m_ControlPoints.Array.data[3].position.x
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2992790694869975905, guid: 1a6ac744dce49cd48a3f4f3ae48a11b4,
+        type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     - target: {fileID: 2992790694869975918, guid: 1a6ac744dce49cd48a3f4f3ae48a11b4,
         type: 3}
       propertyPath: m_DynamicOccludee
@@ -4996,7 +5373,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1259429780
 PrefabInstance:
@@ -5080,6 +5457,32 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[0].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[1].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[2].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[3].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
       propertyPath: m_DynamicOccludee
@@ -5089,7 +5492,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ShapeTexture
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2800000, guid: e7b64ad8cf0aa384eb34092ddf8a1f2f, type: 3}
     - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
       propertyPath: m_Color.r
@@ -5109,6 +5512,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Center.y
+      value: -0.00000023841858
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Extent.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Extent.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6074689923322109797, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
@@ -5265,6 +5688,12 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4998945726348538831, guid: f6f58889aee4f7246bd993647462bddb,
+        type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6f58889aee4f7246bd993647462bddb, type: 3}
 --- !u!4 &1265116836 stripped
@@ -5340,7 +5769,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ShapeTexture
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2800000, guid: e7b64ad8cf0aa384eb34092ddf8a1f2f, type: 3}
     - target: {fileID: 4998945726348538828, guid: f6f58889aee4f7246bd993647462bddb,
         type: 3}
       propertyPath: m_Color.r
@@ -5360,6 +5789,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998945726348538828, guid: f6f58889aee4f7246bd993647462bddb,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998945726348538828, guid: f6f58889aee4f7246bd993647462bddb,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Center.y
+      value: -0.00000023841858
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998945726348538828, guid: f6f58889aee4f7246bd993647462bddb,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Extent.x
+      value: 2.0000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998945726348538828, guid: f6f58889aee4f7246bd993647462bddb,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Extent.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4998945726348538829, guid: f6f58889aee4f7246bd993647462bddb,
         type: 3}
@@ -5436,6 +5885,32 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4998945726348538831, guid: f6f58889aee4f7246bd993647462bddb,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[0].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998945726348538831, guid: f6f58889aee4f7246bd993647462bddb,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[1].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998945726348538831, guid: f6f58889aee4f7246bd993647462bddb,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[2].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998945726348538831, guid: f6f58889aee4f7246bd993647462bddb,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[3].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998945726348538831, guid: f6f58889aee4f7246bd993647462bddb,
+        type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6f58889aee4f7246bd993647462bddb, type: 3}
 --- !u!4 &1277405086 stripped
@@ -5444,6 +5919,85 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1277405085}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1278074913
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1723183321127950579, guid: 5823cb0f41c73e542b3dd062c247cb83,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.7757835
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723183321127950579, guid: 5823cb0f41c73e542b3dd062c247cb83,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5318294
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723183321127950579, guid: 5823cb0f41c73e542b3dd062c247cb83,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 55.771202
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723183321127950579, guid: 5823cb0f41c73e542b3dd062c247cb83,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723183321127950579, guid: 5823cb0f41c73e542b3dd062c247cb83,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723183321127950579, guid: 5823cb0f41c73e542b3dd062c247cb83,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723183321127950579, guid: 5823cb0f41c73e542b3dd062c247cb83,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723183321127950579, guid: 5823cb0f41c73e542b3dd062c247cb83,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723183321127950579, guid: 5823cb0f41c73e542b3dd062c247cb83,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723183321127950579, guid: 5823cb0f41c73e542b3dd062c247cb83,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723183321127950579, guid: 5823cb0f41c73e542b3dd062c247cb83,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723183321127950580, guid: 5823cb0f41c73e542b3dd062c247cb83,
+        type: 3}
+      propertyPath: buttons.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723183321127950580, guid: 5823cb0f41c73e542b3dd062c247cb83,
+        type: 3}
+      propertyPath: colorBlind
+      value: 
+      objectReference: {fileID: 519420030}
+    - target: {fileID: 1723183321127950581, guid: 5823cb0f41c73e542b3dd062c247cb83,
+        type: 3}
+      propertyPath: m_Name
+      value: Accessibility Controller
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5823cb0f41c73e542b3dd062c247cb83, type: 3}
 --- !u!1001 &1328657370
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5511,6 +6065,32 @@ PrefabInstance:
       propertyPath: m_Name
       value: Left RTriangle
       objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[0].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[1].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[2].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[3].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
       propertyPath: m_DynamicOccludee
@@ -5520,7 +6100,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ShapeTexture
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2800000, guid: e7b64ad8cf0aa384eb34092ddf8a1f2f, type: 3}
     - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
       propertyPath: m_Color.r
@@ -5550,6 +6130,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.a
       value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Center.y
+      value: -0.00000023841858
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Extent.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Extent.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6074689923322109797, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
@@ -5726,6 +6326,32 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[0].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[1].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[2].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[3].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
       propertyPath: m_DynamicOccludee
@@ -5735,7 +6361,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ShapeTexture
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2800000, guid: e7b64ad8cf0aa384eb34092ddf8a1f2f, type: 3}
     - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
       propertyPath: m_Color.r
@@ -5759,6 +6385,26 @@ PrefabInstance:
     - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
       propertyPath: m_MaskInteraction
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Center.y
+      value: -0.00000023841858
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Extent.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Extent.y
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6074689923322109797, guid: fbe1b86623ffdeb4aab459c9a177a293,
@@ -5886,7 +6532,7 @@ RectTransform:
   m_Children:
   - {fileID: 407610991}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5970,6 +6616,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Left RTriangle
       objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
       propertyPath: m_DynamicOccludee
@@ -6205,6 +6857,12 @@ PrefabInstance:
       propertyPath: m_WorldSpaceUV
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
       propertyPath: m_DynamicOccludee
@@ -6360,6 +7018,32 @@ PrefabInstance:
       propertyPath: m_OptimizeCollider
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[0].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[1].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[2].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[3].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
       propertyPath: m_DynamicOccludee
@@ -6369,7 +7053,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ShapeTexture
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2800000, guid: e7b64ad8cf0aa384eb34092ddf8a1f2f, type: 3}
     - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
       propertyPath: m_Color.r
@@ -6399,6 +7083,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.a
       value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Center.y
+      value: -0.00000023841858
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Extent.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Extent.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6074689923322109797, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
@@ -6549,6 +7253,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.23584908, g: 0.23584908, b: 0.23584908, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -6648,6 +7353,32 @@ PrefabInstance:
       propertyPath: m_Name
       value: Left RTriangle 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[0].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[1].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[2].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[3].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
       propertyPath: m_DynamicOccludee
@@ -6657,7 +7388,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ShapeTexture
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2800000, guid: e7b64ad8cf0aa384eb34092ddf8a1f2f, type: 3}
     - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
       propertyPath: m_Color.r
@@ -6687,6 +7418,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.a
       value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Center.y
+      value: -0.00000023841858
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Extent.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Extent.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6074689923322109797, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
@@ -6790,7 +7541,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1524546209
 MonoBehaviour:
@@ -6876,7 +7627,7 @@ Transform:
   - {fileID: 411168026}
   - {fileID: 1272367404}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1609686384
 GameObject:
@@ -6913,8 +7664,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1420.7197, y: -435.93875}
-  m_SizeDelta: {x: 939.85693, y: 871.8775}
+  m_AnchoredPosition: {x: 1420.7197, y: -440.4567}
+  m_SizeDelta: {x: 939.85693, y: 760.9134}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1609686386
 MonoBehaviour:
@@ -6960,6 +7711,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 681051334}
+        m_TargetAssemblyTypeName: 
         m_MethodName: Choose
         m_Mode: 3
         m_Arguments:
@@ -6971,6 +7723,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 638041370}
+        m_TargetAssemblyTypeName: 
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
@@ -6996,13 +7749,14 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 36d61f5461608f34fbbd56c6b6e8063c, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -7053,8 +7807,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 475.39563, y: -435.93875}
-  m_SizeDelta: {x: 950.79126, y: 871.8775}
+  m_AnchoredPosition: {x: 475.39563, y: -440.4567}
+  m_SizeDelta: {x: 950.79126, y: 760.9134}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1638043766
 MonoBehaviour:
@@ -7100,6 +7854,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 681051334}
+        m_TargetAssemblyTypeName: 
         m_MethodName: Choose
         m_Mode: 3
         m_Arguments:
@@ -7111,6 +7866,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 638041370}
+        m_TargetAssemblyTypeName: 
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
@@ -7136,13 +7892,14 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: b29208336c48fed41801b65346f24b40, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -7260,6 +8017,32 @@ PrefabInstance:
       propertyPath: m_WorldSpaceUV
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[0].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[1].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[2].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[3].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
       propertyPath: m_DynamicOccludee
@@ -7269,7 +8052,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ShapeTexture
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2800000, guid: e7b64ad8cf0aa384eb34092ddf8a1f2f, type: 3}
     - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
       propertyPath: m_Color.r
@@ -7299,6 +8082,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Extent.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Extent.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6074689923322109797, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
@@ -7363,7 +8161,7 @@ Transform:
   - {fileID: 1536157777}
   - {fileID: 2094157848}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1676772921
 GameObject:
@@ -7418,7 +8216,7 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 0
+    m_Top: 60
     m_Bottom: 0
   m_ChildAlignment: 0
   m_Spacing: 0
@@ -7428,6 +8226,7 @@ MonoBehaviour:
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1001 &1682780864
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7435,6 +8234,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1272367404}
     m_Modifications:
+    - target: {fileID: 3105107258520044, guid: 8393af3d0be973d438ce6942b5ad55e3, type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     - target: {fileID: 3105107258520045, guid: 8393af3d0be973d438ce6942b5ad55e3, type: 3}
       propertyPath: m_Name
       value: Triangle
@@ -7702,6 +8506,12 @@ PrefabInstance:
       propertyPath: m_WorldSpaceUV
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
       propertyPath: m_DynamicOccludee
@@ -7852,6 +8662,12 @@ PrefabInstance:
       propertyPath: m_Spline.m_ControlPoints.Array.data[3].position.x
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2992790694869975905, guid: 1a6ac744dce49cd48a3f4f3ae48a11b4,
+        type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     - target: {fileID: 2992790694869975918, guid: 1a6ac744dce49cd48a3f4f3ae48a11b4,
         type: 3}
       propertyPath: m_DynamicOccludee
@@ -8192,6 +9008,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Square
       objectReference: {fileID: 0}
+    - target: {fileID: 4998945726348538831, guid: f6f58889aee4f7246bd993647462bddb,
+        type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6f58889aee4f7246bd993647462bddb, type: 3}
 --- !u!4 &1827277791 stripped
@@ -8307,6 +9129,12 @@ PrefabInstance:
       propertyPath: m_WorldSpaceUV
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
       propertyPath: m_DynamicOccludee
@@ -8537,6 +9365,12 @@ PrefabInstance:
       propertyPath: m_WorldSpaceUV
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
       propertyPath: m_DynamicOccludee
@@ -8612,6 +9446,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1536157777}
     m_Modifications:
+    - target: {fileID: 3105107258520044, guid: 8393af3d0be973d438ce6942b5ad55e3, type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     - target: {fileID: 3105107258520045, guid: 8393af3d0be973d438ce6942b5ad55e3, type: 3}
       propertyPath: m_Name
       value: Triangle 2
@@ -8713,6 +9552,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2094157848}
     m_Modifications:
+    - target: {fileID: 3105107258520044, guid: 8393af3d0be973d438ce6942b5ad55e3, type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     - target: {fileID: 3105107258520045, guid: 8393af3d0be973d438ce6942b5ad55e3, type: 3}
       propertyPath: m_Name
       value: Triangle
@@ -8920,6 +9764,32 @@ PrefabInstance:
       propertyPath: m_Spline.m_ControlPoints.Array.data[3].position.x
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2992790694869975905, guid: 1a6ac744dce49cd48a3f4f3ae48a11b4,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[0].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2992790694869975905, guid: 1a6ac744dce49cd48a3f4f3ae48a11b4,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[1].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2992790694869975905, guid: 1a6ac744dce49cd48a3f4f3ae48a11b4,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[2].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2992790694869975905, guid: 1a6ac744dce49cd48a3f4f3ae48a11b4,
+        type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[3].m_CornerMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2992790694869975905, guid: 1a6ac744dce49cd48a3f4f3ae48a11b4,
+        type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     - target: {fileID: 2992790694869975918, guid: 1a6ac744dce49cd48a3f4f3ae48a11b4,
         type: 3}
       propertyPath: m_DynamicOccludee
@@ -8929,7 +9799,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ShapeTexture
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2800000, guid: e7b64ad8cf0aa384eb34092ddf8a1f2f, type: 3}
     - target: {fileID: 2992790694869975918, guid: 1a6ac744dce49cd48a3f4f3ae48a11b4,
         type: 3}
       propertyPath: m_LocalAABB.m_Center.x
@@ -8964,6 +9834,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2992790694869975918, guid: 1a6ac744dce49cd48a3f4f3ae48a11b4,
+        type: 3}
+      propertyPath: m_LocalAABB.m_Extent.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2992790694869975919, guid: 1a6ac744dce49cd48a3f4f3ae48a11b4,
         type: 3}
@@ -9197,6 +10072,12 @@ PrefabInstance:
       propertyPath: m_WorldSpaceUV
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4199575053817196782, guid: fbe1b86623ffdeb4aab459c9a177a293,
+        type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     - target: {fileID: 4199575053817196783, guid: fbe1b86623ffdeb4aab459c9a177a293,
         type: 3}
       propertyPath: m_DynamicOccludee
@@ -9337,6 +10218,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 411168026}
     m_Modifications:
+    - target: {fileID: 3105107258520044, guid: 8393af3d0be973d438ce6942b5ad55e3, type: 3}
+      propertyPath: m_SpriteShape
+      value: 
+      objectReference: {fileID: 11400000, guid: 954e6ffeaab221d469c2318f38b733ef,
+        type: 2}
     - target: {fileID: 3105107258520045, guid: 8393af3d0be973d438ce6942b5ad55e3, type: 3}
       propertyPath: m_Name
       value: Triangle

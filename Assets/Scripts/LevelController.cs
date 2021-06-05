@@ -38,10 +38,13 @@ public class LevelController : MonoBehaviour {
             for (int i = 10; i >= 0; i--) {
                 var emission = shadowParticle[silhouette.Key].emission;
                 emission.rateOverTime = i;
-                float showing = (float) ((maxIteration - i) * 0.1f);
+                yield return new WaitForSeconds(0.05f);
+            }
+            for (int i = 0; i < 10; i++) {
+                float showing = (float) i * 0.1f;
                 shadowImage[silhouette.Key].color =
                     new Color(colorTmp.r, colorTmp.g, colorTmp.b, showing);
-                yield return new WaitForSeconds(0.05f);
+                yield return new WaitForSeconds(0.3f);
             }
         }
     }

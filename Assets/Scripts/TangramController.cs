@@ -10,8 +10,8 @@ public class TangramController : MonoBehaviour {
 
     private bool mTemplate = false;
     private float mInitialSpeed = 0f;
-    private float mRotationSpeed = 0.2f;
-    private float mTranslateSpeed = 0.01f;
+    private float mRotationSpeed = 0.5f;
+    private float mTranslateSpeed = 0.03f;
     private Transform mGameObjectFocused = null;
 
     private void Awake() {

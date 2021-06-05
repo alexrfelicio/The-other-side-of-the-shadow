@@ -43,7 +43,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 11
+  serializedVersion: 12
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -98,7 +98,8 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 2c47c7434ce162d4a8ad0826ce7f461e,
+    type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -118,6 +119,8 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
@@ -157,8 +160,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -2019}
-  m_SizeDelta: {x: 0, y: 2945.8408}
+  m_AnchoredPosition: {x: 0, y: 2425}
+  m_SizeDelta: {x: 0, y: 3058.853}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &423249330
 MonoBehaviour:
@@ -175,6 +178,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -192,91 +196,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'The other side of the shadow
-
-    Inspired by Plato''s Allegory of the
-    Cave
-
-
-    CREDITS
-
-
-    TEAM
-
-    Adriana Siviero - Gameplay idea
-
-    Alex
-    Rodrigues - Developer
-
-    Camila Fischer - Narrative
-
-
-    SUPER SPECIAL THANKS
-
-
-    ICON
-    ASSETS
-
-    Alfredo Hernandez
-
-    bqlqn
-
-    Flat Icons
-
-    Freepik
-
-    Kiranshastry
-
-    Smashicons
-
-    Those
-    Icons
-
-    Vectors Market
-
-
-    BACKGROUND ASSETS
-
-    brgfx
-
-    freepik
-
-    upklyak
-
-
-    TILE
-    ASSET
-
-    MrBeast
-
-
-    TOP DOWN ASSET
-
-    Pipoya
-
-    ThomasWasTaken
-
-
-    SOUNDS:
-
-    Brandon75689
-
-    isaiah658
-
-    JaggedStone
-
-    Lokif
-
-    Luke.RUSTLTD
-
-    PagDev
-
-    SubspaceAudio
-
-    Virix
-
-
-'
+  m_Text: "O outro lado da sombra\nInspirado pela Alegoria da Caverna de Plat\xE3o\n\nCR\xC9DITOS\n\nTIME\nAdriana
+    Siviero - Ideia da jogabilidade\nAlex Rodrigues - Desenvolvedor\nCamila Fischer
+    - Narrativa\n\n\nAGRADECIMENTO MUITO ESPECIAL PARA\n\nACCESSIBILIDADE\nAlan Zucconi\n\nASSET
+    DE \xCDCONES\nAlfredo Hernandez\nbqlqn\nFlat Icons\nFreepik\nKiranshastry\nSmashicons\nThose
+    Icons\nVectors Market\n\nASSETS DE PLANO DE FUNDO\nbrgfx\nfreepik\nupklyak\n\nASSETS
+    DE TILE\nMrBeast\n\nASSETS TOP DOWN\nPipoya\nThomasWasTaken\n\nSOM\nBrandon75689\nisaiah658\nJaggedStone\nLokif\nLuke.RUSTLTD\nPagDev\nSubspaceAudio\nVirix\n\nMUITO
+    OBRIGADO!"
 --- !u!222 &423249331
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -368,6 +294,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -501,6 +428,7 @@ GameObject:
   - component: {fileID: 1324582286}
   - component: {fileID: 1324582285}
   - component: {fileID: 1324582284}
+  - component: {fileID: 1324582287}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -573,6 +501,99 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1324582287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324582283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75ef3d3a90250f940860f4733f93ce6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mode: 0
+  showDifference: 0
+--- !u!1001 &1376907652
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1723183321127950579, guid: 5823cb0f41c73e542b3dd062c247cb83,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.7757835
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723183321127950579, guid: 5823cb0f41c73e542b3dd062c247cb83,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5318294
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723183321127950579, guid: 5823cb0f41c73e542b3dd062c247cb83,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 55.771202
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723183321127950579, guid: 5823cb0f41c73e542b3dd062c247cb83,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723183321127950579, guid: 5823cb0f41c73e542b3dd062c247cb83,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723183321127950579, guid: 5823cb0f41c73e542b3dd062c247cb83,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723183321127950579, guid: 5823cb0f41c73e542b3dd062c247cb83,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723183321127950579, guid: 5823cb0f41c73e542b3dd062c247cb83,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723183321127950579, guid: 5823cb0f41c73e542b3dd062c247cb83,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723183321127950579, guid: 5823cb0f41c73e542b3dd062c247cb83,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723183321127950579, guid: 5823cb0f41c73e542b3dd062c247cb83,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723183321127950580, guid: 5823cb0f41c73e542b3dd062c247cb83,
+        type: 3}
+      propertyPath: buttons.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723183321127950580, guid: 5823cb0f41c73e542b3dd062c247cb83,
+        type: 3}
+      propertyPath: colorBlind
+      value: 
+      objectReference: {fileID: 1324582287}
+    - target: {fileID: 1723183321127950581, guid: 5823cb0f41c73e542b3dd062c247cb83,
+        type: 3}
+      propertyPath: m_Name
+      value: Accessibility Controller
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5823cb0f41c73e542b3dd062c247cb83, type: 3}
 --- !u!1 &1391363659
 GameObject:
   m_ObjectHideFlags: 0

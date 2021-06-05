@@ -9,7 +9,7 @@ public class Identifier : MonoBehaviour {
     [SerializeField] private bool mTemplate;
 
     private bool mCorrect;
-    private float mThreshold = 3f;
+    private float mThreshold = 2.5f;
 
     private void OnTriggerStay2D(Collider2D collision) {
         Identifier collided = collision.gameObject.GetComponent<Identifier>();
