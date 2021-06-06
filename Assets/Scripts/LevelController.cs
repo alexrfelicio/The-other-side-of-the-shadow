@@ -20,7 +20,7 @@ public class LevelController : MonoBehaviour {
             var newPlayerPos =
                 new Vector3(gamePersist.GetPlayerPosition().x, gamePersist.GetPlayerPosition().y + 1, gamePersist.GetPlayerPosition().z);
             playerPosition.transform.position = newPlayerPos;
-            StartCoroutine(RemoveShadowParticle(gamePersist.GetSilhouette()));
+            RemoveShadowParticle(gamePersist.GetSilhouette());
         }
 
         if (gamePersist.GetSilhouette().Count == 3) {
@@ -28,24 +28,31 @@ public class LevelController : MonoBehaviour {
         }
     }
 
-    IEnumerator RemoveShadowParticle(Dictionary<int, Sprite> silhouettes) {
-        const float maxIteration = 10;
+    private void RemoveShadowParticle(Dictionary<int, Sprite> silhouettes) {
         foreach (var silhouette in silhouettes) {
             shadowImage[silhouette.Key].sprite = silhouette.Value;
             var colorTmp = shadowImage[silhouette.Key].color;
             shadowImage[silhouette.Key].color =
                     new Color(colorTmp.r, colorTmp.g, colorTmp.b, 0f);
-            for (int i = 10; i >= 0; i--) {
-                var emission = shadowParticle[silhouette.Key].emission;
-                emission.rateOverTime = i;
-                yield return new WaitForSeconds(0.05f);
-            }
-            for (int i = 0; i < 10; i++) {
-                float showing = (float) i * 0.1f;
-                shadowImage[silhouette.Key].color =
-                    new Color(colorTmp.r, colorTmp.g, colorTmp.b, showing);
-                yield return new WaitForSeconds(0.3f);
-            }
+            StartCoroutine(StopShadowParticle(silhouette.Key));
+            StartCoroutine(ShowShadowSprite(colorTmp, silhouette.Key));
+        }
+    }
+
+    IEnumerator StopShadowParticle(int key) {
+        var emission = shadowParticle[key].emission;
+        for (int i = 10; i >= 0; i--) {
+            emission.rateOverTime = i;
+            yield return new WaitForSeconds(0.05f);
+        }
+    }
+
+    IEnumerator ShowShadowSprite(Color color, int key) {
+        for (int i = 0; i < 10; i++) {
+            float showing = (float) i * 0.1f;
+            shadowImage[key].color =
+                new Color(color.r, color.g, color.b, showing);
+            yield return new WaitForSeconds(0.3f);
         }
     }
 
