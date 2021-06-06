@@ -76,4 +76,10 @@ public class GamePersist : MonoBehaviour {
         return Instance.colorBlindMode;
     }
 
+    public void ResetGamePersist() {
+        Instance.good = 0;
+        Instance.bad = 0;
+        Instance.silhouettes = new Dictionary<int, Sprite>();
+    }
+
 }

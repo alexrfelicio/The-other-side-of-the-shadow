@@ -8,11 +8,12 @@ public class LevelController : MonoBehaviour {
     [SerializeField] private SpriteRenderer[] shadowImage;
     [SerializeField] private ParticleSystem[] shadowParticle;
     [SerializeField] private GameObject firecamp;
+    [SerializeField] private AudioClip caveSFX;
 
     private void Start() {
         MusicPersist musicPersist = FindObjectOfType<MusicPersist>();
         if (!musicPersist.IsPlaying()) {
-            musicPersist.PlayAudio();
+            musicPersist.ChangeAudioClip(caveSFX);
         }
 
         GamePersist gamePersist = FindObjectOfType<GamePersist>();

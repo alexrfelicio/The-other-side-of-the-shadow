@@ -11148,6 +11148,7 @@ MonoBehaviour:
   - {fileID: 903357382}
   - {fileID: 2063633587}
   firecamp: {fileID: 1890501323}
+  caveSFX: {fileID: 8300000, guid: a957516fe31d76c46b6b925a179550a8, type: 3}
 --- !u!4 &1403023678
 Transform:
   m_ObjectHideFlags: 0

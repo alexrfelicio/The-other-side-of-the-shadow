@@ -8,6 +8,7 @@ public class CreditsController : MonoBehaviour {
 
     public void BackToHome() {
         FindObjectOfType<MusicPersist>().StopAudio();
+        FindObjectOfType<GamePersist>().ResetGamePersist();
         StartCoroutine(BackToHomeCoroutine());
     }
 
