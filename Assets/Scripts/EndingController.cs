@@ -24,11 +24,11 @@ public class EndingController : MonoBehaviour {
         yield return new WaitForSeconds(3f);
         GamePersist gamePersist = FindObjectOfType<GamePersist>();
         if (gamePersist.GetBad() > gamePersist.GetGood()) {
-            FindObjectOfType<MusicPersist>().ChangeAudioClip(badEndSong);
-            badEnd.SetActive(true);
-        } else {
             FindObjectOfType<MusicPersist>().ChangeAudioClip(goodEndSong);
             goodEnd.SetActive(true);
+        } else {
+            FindObjectOfType<MusicPersist>().ChangeAudioClip(badEndSong);
+            badEnd.SetActive(true);
         }
         yield return new WaitForSeconds(10);
         FindObjectOfType<ScenesManager>().LoadScene(CREDITS_SCENE_IDX);

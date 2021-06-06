@@ -18,6 +18,8 @@ public class GamePersist : MonoBehaviour {
             Instance = this;
             DontDestroyOnLoad(gameObject);
             Instance.colorBlindMode = ColorBlindMode.Normal;
+            Instance.good = 0;
+            Instance.bad = 0;
         } else {
             Destroy(gameObject);
         }
