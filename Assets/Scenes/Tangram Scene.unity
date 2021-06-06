@@ -1771,7 +1771,7 @@ PrefabInstance:
     - target: {fileID: 1211885177537284827, guid: a838ea7756fb32a4a91d3b4c49237f69,
         type: 3}
       propertyPath: m_Color.a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4207747273456338425, guid: a838ea7756fb32a4a91d3b4c49237f69,
         type: 3}
@@ -1783,6 +1783,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 6893621380359400194, guid: a838ea7756fb32a4a91d3b4c49237f69,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 8718762227663693100, guid: a838ea7756fb32a4a91d3b4c49237f69,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5620,7 +5625,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 4.919983, y: -9.4}
+  m_AnchoredPosition: {x: 4.919983, y: -9.400002}
   m_SizeDelta: {x: 87.39093, y: 42.40699}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1191078204
